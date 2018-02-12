@@ -1,12 +1,15 @@
+
 pipeline {
     agent {
-        dockerfile true
+      dockerfile true
     }
     stages {
-        stage('Run tomcat') {
+        stage ('Example') {
             steps {
-                sh 'docker ps -a'
+               
+                sh 'hostname'
             }
         }
     }
+
 }
