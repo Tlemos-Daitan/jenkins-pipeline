@@ -3,9 +3,10 @@ pipeline {
         dockerfile true
     }
     stages {
-        stage('Example') {
+        stage('Run tomcat') {
             steps {
-               echo 'Hello World!'
+                sh 'docker run -d --name tomcat1 -p 8081:8080 tomcat:8.5-jre8'
+                sh 'docker ps -a'
             }
         }
     }
